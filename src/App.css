@@ -1,0 +1,14 @@
+/* App.css */
+.bg-custom-bg {
+  background-image: url("https://framerusercontent.com/images/QEx1zQoyK3KpzeuGbmCkSptfXQ.jpg?scale-down-to=2048");
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-attachment: fixed; /* Keeps the image fixed during scroll */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: Adds a dark overlay for better text contrast */
+}
