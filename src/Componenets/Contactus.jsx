@@ -5,13 +5,13 @@ function ContactUs() {
   return (
     <>
       <div className="flex flex-col min-h-screen bg-black text-white bg-custom-bg bg-cover bg-center">
-        <div className="mx-10 mt-7">
+        <div className="mx-10 mt-7 mi:mx-3 ml:mx-3">
           <Navbar />
         </div>
         <section className="bg-black dark:bg-black min-h-screen bg-custom-bg bg-cover bg-center">
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <motion.h2
-              className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white dark:text-white"
+              className="mb-4 text-4xl   tracking-tight font-extrabold text-center text-white dark:text-white"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}

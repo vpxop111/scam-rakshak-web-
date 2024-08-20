@@ -4,14 +4,14 @@ import Navbar from "./Navbar"; // Import the Navbar component
 
 export default function PricingPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white min-h-screen bg-custom-bg bg-cover bg-center">
-      <div className="mx-10 mt-7">
+    <div className="flex flex-col min-h-screen bg-black text-white  bg-custom-bg bg-cover bg-center">
+      <div className="mx-10 mt-7 mi:mx-3 ml:mx-3">
         <Navbar />
       </div>{" "}
       {/* Use the Navbar component */}
       <main className="flex-1 flex items-center justify-center min-h-screen bg-custom-bg bg-cover bg-center">
         <section className="w-full py-10 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6 mx-auto">
+          <div className="container px-4 ml:px-1 md:px-6 mx-auto">
             <div className="text-center space-y-4">
               <motion.h2
                 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"

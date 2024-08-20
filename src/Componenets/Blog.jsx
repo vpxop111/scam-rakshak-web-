@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 export default function Blog() {
   return (
     <div className="flex flex-col text-white min-h-screen bg-custom-bg bg-cover bg-center">
-      <div className="mx-10 pt-5">
+      <div className="mx-10 pt-5 mi:mx-3 ml:mx-3">
         <Navbar />
       </div>
-      <div className="flex flex-row justify-center text-[4rem] mt-[17rem]">
+      <div className="flex flex-row justify-center text-[4rem] mi:text-[3rem]  ml:text-[2.5rem] mt-[17rem] ml:mx-3">
         <motion.h1
           className="text-[#ddff00]"
           initial={{ opacity: 0, y: -20 }}

@@ -12,7 +12,7 @@ export default function Home() {
         transition={{ duration: 1 }}
       >
         <div className="pt-5">
-          <div className="mx-10">
+          <div className="mx-10 ma:mx-3 mi:mx-3 ml:mx-3">
             <Navbar />
           </div>
           <div>
