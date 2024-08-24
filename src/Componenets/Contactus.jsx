@@ -94,8 +94,8 @@ function ContactUs() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="shadow-sm bg-black border border-gray-600 text-gray-300 text-sm rounded-lg focus:outline-none focus:ring-0 focus:border-[#ddff00] block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:shadow-sm-light"
-                  placeholder="name@flowbite.com"
+                  className="shadow-sm bg-black border text-gray-300 text-sm rounded-lg focus:outline-none focus:ring-0 focus:border-[#ddff00] block w-full p-2.5"
+                  placeholder="name@gmail.com"
                   required
                 />
               </motion.div>
@@ -116,7 +116,7 @@ function ContactUs() {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="block p-3 w-full text-sm text-gray-300 bg-black rounded-lg border border-gray-600 focus:outline-none focus:ring-0 focus:border-[#ddff00] shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:shadow-sm-light"
+                  className="block p-3 w-full text-sm text-gray-300 bg-black rounded-lg border border-gray-600 focus:outline-none focus:ring-0 focus:border-[#ddff00] shadow-sm "
                   placeholder="Let us know how we can help you"
                   required
                 />
@@ -139,7 +139,7 @@ function ContactUs() {
                   rows="6"
                   value={formData.message}
                   onChange={handleChange}
-                  className="block p-2.5 w-full text-sm text-gray-300 bg-black rounded-lg shadow-sm border border-gray-600 focus:outline-none focus:ring-0 focus:border-[#ddff00] dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:shadow-sm-light"
+                  className="block p-2.5 w-full text-sm text-gray-300 bg-black rounded-lg shadow-sm border border-gray-600 focus:outline-none focus:ring-0 focus:border-[#ddff00] "
                   placeholder="Leave a comment..."
                 ></textarea>
               </motion.div>

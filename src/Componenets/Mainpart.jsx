@@ -19,10 +19,10 @@ export default function Mainpart() {
         <h1 className="text-[6rem] mi:hidden ml:hidden  mi:text-[1.6rem] mi:mx-2 m:text-[1.7rem] ma1:text-[2rem] ma2:text-[2.5rem]  mac:text-[2.8rem] mac1:text-[3.2rem] md:text-[3.5rem] mac2:text-[4.2rem]  font-bold leading-tight mr-2 mi:mr-2  mx-4">
           ScamRakshak can
         </h1>
-        <h1 className="text-[6rem] ml:text-[1.2rem] ml:mx-2 mi:text-[1.6rem] mi:mx-2 font-bold m:hidden ma1:hidden ma2:hidden mac:hidden mac1:hidden mac2:hidden md:hidden">
+        <h1 className="text-[6rem] ml:text-[1.6rem] ml:mx-2 mi:text-[1.6rem] mi:mx-2 font-bold m:hidden ma1:hidden ma2:hidden mac:hidden mac1:hidden mac2:hidden md:hidden">
           ScamRakshak can
         </h1>
-        <div className="mi:text-[1.6rem] ml:text-[1.2rem]  font-bold text-[#ddff00] m:hidden ma1:hidden ma2:hidden mac:hidden mac1:hidden mac2:hidden md:hidden">
+        <div className="mi:text-[1.6rem] ml:text-[1.6rem]  font-bold text-[#ddff00] m:hidden ma1:hidden ma2:hidden mac:hidden mac1:hidden mac2:hidden md:hidden">
           <TypewriterComponent
             options={{
               strings: ["Detect.", "Defend.", "Protect.", "Secure."],
