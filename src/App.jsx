@@ -7,7 +7,7 @@ import Home from "./Componenets/Home";
 import PricingPage from "./Componenets/Pricingpage";
 import ContactUs from "./Componenets/Contactus";
 import Blog from "./Componenets/Blog";
-
+import { Analytics } from "@vercel/analytics/react";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +31,7 @@ export default function App() {
   return (
     <>
       <SpeedInsights />
+      <Analytics />
       <RouterProvider router={router} />
     </>
   );
