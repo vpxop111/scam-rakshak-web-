@@ -1,12 +1,13 @@
-import React from "react";
-
 import "./App.css"; // Import the CSS file for custom styles
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Home from "./Componenets/Home";
 import PricingPage from "./Componenets/Pricingpage";
 import ContactUs from "./Componenets/Contactus";
 import Blog from "./Componenets/Blog";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,6 +26,12 @@ const router = createBrowserRouter([
     element: <Blog />,
   },
 ]);
+
 export default function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <SpeedInsights />
+      <RouterProvider router={router} />
+    </>
+  );
 }

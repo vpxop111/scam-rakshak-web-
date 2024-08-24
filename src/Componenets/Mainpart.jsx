@@ -1,5 +1,6 @@
-import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import TypewriterComponent from "typewriter-effect";
 
 export default function Mainpart() {
   return (
@@ -10,46 +11,58 @@ export default function Mainpart() {
       transition={{ duration: 0.8 }}
     >
       <motion.div
-        className="flex flex-row text-[4rem] mac:text-[3rem] mac1:text-[3rem] ma1:text-[2rem] ma2:text-[2.3rem] mi:text-[1.7rem] ml:text-[1.4rem] font-medium text-white"
+        className="flex flex-row items-center text-center"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <h1 className="mx-1">Defend.</h1>
-        <h1 className="text-[#ddff00] mx-1">Detect.</h1>
-        <h1 className="mx-1">Protect.</h1>
-        <h1 className="text-[#ddff00] mx-1">Scams.</h1>
+        <h1 className="text-[6rem] mi:hidden ml:hidden  mi:text-[1.6rem] mi:mx-2 m:text-[1.7rem] ma1:text-[2rem] ma2:text-[2.5rem]  mac:text-[2.8rem] mac1:text-[3.2rem] md:text-[3.5rem] mac2:text-[4.2rem]  font-bold leading-tight mr-2 mi:mr-2  mx-4">
+          ScamRakshak can
+        </h1>
+        <h1 className="text-[6rem] ml:text-[1.2rem] ml:mx-2 mi:text-[1.6rem] mi:mx-2 font-bold m:hidden ma1:hidden ma2:hidden mac:hidden mac1:hidden mac2:hidden md:hidden">
+          ScamRakshak can
+        </h1>
+        <div className="mi:text-[1.6rem] ml:text-[1.2rem]  font-bold text-[#ddff00] m:hidden ma1:hidden ma2:hidden mac:hidden mac1:hidden mac2:hidden md:hidden">
+          <TypewriterComponent
+            options={{
+              strings: ["Detect.", "Defend.", "Protect.", "Secure."],
+              autoStart: true,
+              loop: true,
+              delay: 75,
+            }}
+          />
+        </div>
+        <div className="text-[6rem] ml:hidden mi:hidden mi:mb-1 m:text-[1.7rem] ma1:text-[2rem] ma2:text-[2.5rem]  mac:text-[2.8rem] mac1:text-[3.2rem] mac2:text-[4.2rem] md:text-[3.5rem]  font-extrabold text-[#ddff00] mt-1">
+          <TypewriterComponent
+            options={{
+              strings: [
+                "Fight Scams.",
+                "Detect Fraud.",
+                "Block Threats.",
+                "Block Scams.",
+                "Secure Safety.",
+              ],
+              autoStart: true,
+              loop: true,
+              delay: 75,
+            }}
+          />
+        </div>
       </motion.div>
-      <div className="mt-[1.7rem]">
-        <h1 className="text-[1.3rem] mac:text-[1.1rem] mac1:text-[1.1rem] ma1:text-[1rem] ma2:text-[1rem] mi:hidden  ml:hidden   text-center">
-          ScamRakshak is an AI-powered app that protects users from scams by
-        </h1>
-        <h1 className="text-[1.3rem] mac:text-[1.1rem] mac1:text-[1.1rem] ma1:text-[1rem] text-center ma2:text-[1rem] mi:hidden ml:hidden mt-1">
-          detecting and preventing fraud across SMS, email, calls, and more.
-        </h1>
+
+      <div className="mt-8">
+        <h2 className="text-[1rem] ml:text-[0.7rem] ml:mx-[1rem] mi:text-[0.9rem] mi:mx-[2rem] m:text-[0.9rem] m:mx-[4rem] ma2:mx-[9rem] font-semibold ma1:text-[1rem] ma1:mx-[6rem] ma2:text-[1rem] mac:text-[1rem] mac:mx-[11rem] mac1:text-[1rem] mac1:mx-[10rem] sm:text-[1.2rem] text-center leading-relaxed mac2:mx-[15rem]">
+          ScamRakshak: AI-powered protection against fraud across SMS, email,
+          calls, and more.
+        </h2>
       </div>
-      <div className="mt-[1rem] ml:hidden mac2:hidden mac:hidden mac1:hidden ma:hidden ma1:hidden ma2:hidden">
-        <h1 className="text-center">
-          ScamRakshak is an AI-powered app tshat safeguards
-        </h1>
-        <h1 className="text-center mt-1">
-          users from fraud across SMS, email, calls, and more.
-        </h1>
-      </div>
-      <div className="mt-[1rem] text-[0.8rem] mac2:hidden mi:hidden mac:hidden mac1:hidden ma:hidden ma1:hidden ma2:hidden">
-        <h1 className="text-center">
-          ScamRakshak is an AI-powered app tshat safeguards
-        </h1>
-        <h1 className="text-center mt-1">
-          users from fraud across SMS, email, calls, and more.
-        </h1>
-      </div>
+
       <motion.button
-        className="mt-[3rem] px-10 py-3 bg-white text-[1rem] text-black font-semibold rounded-full hover:bg-[#cce500] transition-colors"
-        whileHover={{ scale: 1.1, rotate: [0, 10, -10, 0] }}
+        className="mt-12 px-10 py-4 bg-white text-black text-lg font-semibold rounded-full hover:bg-[#cce500] transition-colors duration-300 shadow-lg"
+        whileHover={{ scale: 1.05, rotate: [0, 5, -5, 0] }}
         transition={{ type: "spring", stiffness: 300 }}
       >
-        Learn More
+        <Link to="/contact">Learn More</Link>
       </motion.button>
     </motion.div>
   );

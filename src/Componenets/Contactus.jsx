@@ -1,7 +1,50 @@
+import { useState } from "react";
 import Navbar from "./Navbar"; // Adjust the path according to your project structure
 import { motion } from "framer-motion";
+import emailjs from "emailjs-com";
 
 function ContactUs() {
+  const [formData, setFormData] = useState({
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_6lhpn5m",
+        "template_4ej8n9q",
+        e.target,
+        "MlQ6hGIMlDp1RWT7e"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Message sent successfully!");
+          // Reset form fields
+          setFormData({
+            email: "",
+            subject: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Failed to send the message. Please try again.");
+        }
+      );
+  };
+
   return (
     <>
       <div className="flex flex-col min-h-screen bg-black text-white bg-custom-bg bg-cover bg-center">
@@ -11,7 +54,7 @@ function ContactUs() {
         <section className="bg-black dark:bg-black min-h-screen bg-custom-bg bg-cover bg-center">
           <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <motion.h2
-              className="mb-4 text-4xl   tracking-tight font-extrabold text-center text-white dark:text-white"
+              className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white dark:text-white"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -28,7 +71,7 @@ function ContactUs() {
               Need details about our Business plan? Let us know.
             </motion.p>
             <motion.form
-              action="#"
+              onSubmit={handleSubmit}
               className="space-y-8"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -48,7 +91,10 @@ function ContactUs() {
                 <input
                   type="email"
                   id="email"
-                  className="shadow-sm bg-black border border-gray-600 hover:border-[#ddff00] text-gray-300 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="shadow-sm bg-black border border-gray-600 text-gray-300 text-sm rounded-lg focus:outline-none focus:ring-0 focus:border-[#ddff00] block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:shadow-sm-light"
                   placeholder="name@flowbite.com"
                   required
                 />
@@ -67,7 +113,10 @@ function ContactUs() {
                 <input
                   type="text"
                   id="subject"
-                  className="block p-3 w-full text-sm text-gray-300 bg-black rounded-lg border border-gray-600 hover:border-[#ddff00] shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="block p-3 w-full text-sm text-gray-300 bg-black rounded-lg border border-gray-600 focus:outline-none focus:ring-0 focus:border-[#ddff00] shadow-sm dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:shadow-sm-light"
                   placeholder="Let us know how we can help you"
                   required
                 />
@@ -86,8 +135,11 @@ function ContactUs() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows="6"
-                  className="block p-2.5 w-full text-sm text-gray-300 bg-black rounded-lg shadow-sm border border-gray-600 hover:border-[#ddff00] focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="block p-2.5 w-full text-sm text-gray-300 bg-black rounded-lg shadow-sm border border-gray-600 focus:outline-none focus:ring-0 focus:border-[#ddff00] dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-300 dark:shadow-sm-light"
                   placeholder="Leave a comment..."
                 ></textarea>
               </motion.div>

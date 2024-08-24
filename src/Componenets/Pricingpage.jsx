@@ -1,10 +1,74 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "./Navbar"; // Import the Navbar component
 
 export default function PricingPage() {
+  const [showComingSoon, setShowComingSoon] = useState(false);
+
+  const handleGetStartedClick = () => {
+    setShowComingSoon(true);
+  };
+
+  if (showComingSoon) {
+    return (
+      <div className="flex flex-col text-white min-h-screen bg-custom-bg bg-cover bg-center">
+        <div className="mx-10 pt-5 mi:mx-3 ml:mx-3">
+          <Navbar />
+        </div>
+        <div className="flex flex-row justify-center text-[4rem] mi:text-[3rem] ml:text-[2.5rem] mt-[17rem] ml:mx-3">
+          <motion.h1
+            className="text-[#ddff00]"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            Coming
+          </motion.h1>
+          <motion.h1
+            className="mx-2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            Soon
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            .
+          </motion.h1>
+          <motion.h1
+            className="text-[#ddff00]"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+          >
+            .
+          </motion.h1>
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+          >
+            .
+          </motion.h1>
+          <motion.h1
+            className="text-[#ddff00]"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1.1 }}
+          >
+            .
+          </motion.h1>
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white  bg-custom-bg bg-cover bg-center">
+    <div className="flex flex-col min-h-screen bg-black text-white bg-custom-bg bg-cover bg-center">
       <div className="mx-10 mt-7 mi:mx-3 ml:mx-3">
         <Navbar />
       </div>{" "}
@@ -107,6 +171,7 @@ export default function PricingPage() {
                   <div className="p-4">
                     <motion.button
                       className="w-full bg-[#ddff00] text-black py-2 rounded-lg hover:bg-[#cce500]"
+                      onClick={handleGetStartedClick}
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
                     >

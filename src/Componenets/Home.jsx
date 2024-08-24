@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import Mainpart from "./Mainpart";
 import Navbar from "./Navbar";

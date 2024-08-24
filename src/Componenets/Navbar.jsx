@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -16,14 +16,14 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="flex flex-row items-center">
+      <Link to="/" className="flex flex-row items-center">
         <img
           src="https://i.ibb.co/WPmQDXT/Screenshot-2024-08-19-at-1-58-45-AM-removebg-preview-2.png"
           className="h-10 w-10 -mr-3"
         />
         <h1 className="text-2xl font-semibold text-[#ddff00]">cam</h1>
         <h1 className="text-2xl font-semibold">Rakshak</h1>
-      </div>
+      </Link>
 
       {/* Responsive Menu */}
       <div className="hidden md:flex flex-row text-xl text-white">
